@@ -12,7 +12,11 @@ a {
 }
 
 body{
-  background-color: white;
+  background-color: #cce5ff;
+}
+
+.words {
+  font-size: 16px;
 }
 
 .table {

@@ -29,6 +29,5 @@ var newContact = ({name: name, email: email, location: loc, phone: phone, face: 
 function findName(event) {
   // console.log($(this).closest('tr').index());
   var thisContact = $(this).closest('tr').index();
-  // var thisContact = $(this).index();
   location.href = `/users/${thisContact}`;
 }
