@@ -1,0 +1,34 @@
+//dynamic content in the indiv. partial file
+extends layout.jade
+  
+block content
+  h1= title
+  p hey oh
+  
+  .container-fluid
+    #formEntry.row
+      form.form-inline
+        .form-group
+          label(for='inputTask') New Contact
+          input#conEntry.form-control(type='name', placeholder='Enter Name')
+        .form-group
+          label(for='inputDate') @
+          input#emailEntry.form-control(type='email', placeholder='Enter Email')
+        .form-group
+          label.locInput(for='inputAmount') Location
+          input#locEntry.form-control(type='text', placeholder='Enter Location')
+        .form-group
+          label.phoneInput(for='inputAmount') #
+          input#phoneEntry.form-control(type='tel', placeholder='xxx xxx xxxx')
+        .form-group
+          label.face(for='inputAmount') Facebook
+          input#faceEntry.form-control(type='text', placeholder='FB handle')
+          
+      button#newEntry.btn.btn-danger Add New Contact
+  
+  #addContact    
+  
+block scripts
+  //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  //- script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+  script(src='js/main.js')
