@@ -6,4 +6,30 @@ body {
 
 a {
   color: #00B7FF;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+body{
+  background-color: white;
+}
+
+table {
+  margin-top: 20px;
+}
+.table {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 44px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+}
+
+th:hover {
+  color: red;
 }

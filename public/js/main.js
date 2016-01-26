@@ -6,6 +6,7 @@ var newContact;
 
 function init() {
   $('#newEntry').click(addNewContact);
+  $('tbody').on('click', 'td', findName);
   console.log(this);
 }
 
@@ -24,10 +25,7 @@ var newContact = ({name: name, email: email, location: loc, phone: phone, face: 
     location.replace('/');
   });
 }
-//   .success(function(data) {
-//     location.replace('/');
-//   })
-//   .fail(function(err) {
-//     alert('fix me');
-//   });
-// }
+
+function findName(event) {
+  console.log(event.target.closest('tr').indexOf());
+}
