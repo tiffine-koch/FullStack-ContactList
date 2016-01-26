@@ -15,7 +15,7 @@ body{
   background-color: white;
 }
 
-table {
+.table {
   margin-top: 20px;
 }
 .table {
@@ -30,6 +30,10 @@ h1 {
   margin-bottom: 40px;
 }
 
-th:hover {
+.name:hover {
   color: red;
+}
+
+button {
+  margin-top: 20px;
 }
