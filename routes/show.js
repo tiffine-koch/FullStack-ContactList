@@ -16,7 +16,7 @@ router.get('/:index', function(req, res, next) {
   fs.readFile('./data/contacts.json', function(err, data) {
     var contacts = JSON.parse(data[req.params.index]);
     contacts.push(req.body);
-    res.render('user', {data: data[req.params.index]})
+    res.render('/:index', {data: data[req.params.index]})
   fs.writeFile('./data/contacts.json', JSON.stringify(contacts), function(err) {
     res.redirect('/');
     });
