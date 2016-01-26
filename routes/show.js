@@ -11,16 +11,5 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/:index', function(req, res, next) {
-  console.log(req.body);
-  fs.readFile('./data/contacts.json', function(err, data) {
-    var contacts = JSON.parse(data[req.params.index]);
-    contacts.push(req.body);
-    res.render('/:index', {data: data[req.params.index]})
-  fs.writeFile('./data/contacts.json', JSON.stringify(contacts), function(err) {
-    res.redirect('/');
-    });
-  });
-});
 
 module.exports = router;

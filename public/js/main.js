@@ -6,7 +6,7 @@ var newContact;
 
 function init() {
   $('#newEntry').click(addNewContact);
-  $('tbody').on('click', 'td', findName);
+  $('tbody').on('click', 'tr', findName);
   console.log(this);
 }
 
@@ -27,6 +27,8 @@ var newContact = ({name: name, email: email, location: loc, phone: phone, face: 
 }
 
 function findName(event) {
-  // console.log(event.target.closest('tr').indexOf());
-  console.log($(this).closest('tr').index());
+  // console.log($(this).closest('tr').index());
+  var thisContact = $(this).closest('tr').index();
+  // var thisContact = $(this).index();
+  location.href = `/users/${thisContact}`;
 }

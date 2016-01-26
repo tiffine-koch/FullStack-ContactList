@@ -22,4 +22,14 @@ router.post('/', function(req, res, next) {
   });
 });
 
+router.get('/:index', function(req, res, next) {
+  console.log(req.body);
+  fs.readFile('./data/contacts.json', function(err, data) {
+    var contacts = JSON.parse(data);
+    var index = req.params.index;
+    var contact = contacts[index];
+    res.render('show', {contact: contact});
+  });
+});
+
 module.exports = router;
